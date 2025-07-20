@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-5 left-0 right-0 z-50  border-border ">
-      <nav className="container mx-auto  px-6 py-4  bg-background/5 rounded-full backdrop-blur-md  ">
+      <nav className="container mx-auto  px-6 py-4  bg-background/5 md:rounded-full  backdrop-blur-md ">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold text-primary">
@@ -23,12 +23,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 relative group"
+                className="text-primary hover:text-primary transition-colors duration-300 relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>

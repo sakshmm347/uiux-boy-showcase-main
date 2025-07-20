@@ -9,19 +9,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex.johnson@email.com',
-      href: 'mailto:alex.johnson@email.com'
+      value: 'sakshmm347@email.com',
+      href: 'mailto:sakshmm347@email.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '7051896282',
+      href: 'tel:7051896282'
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'San Francisco, CA',
+      label: 'Jammu',
+      value: 'Jammu & Kashmir, India',
       href: '#'
     }
   ];
@@ -33,7 +33,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 md:h-screen">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -104,13 +104,13 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-foreground mb-2">
                         First Name
                       </label>
-                      <Input placeholder="John" />
+                      <Input placeholder="Saksham" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
                         Last Name
                       </label>
-                      <Input placeholder="Doe" />
+                      <Input placeholder="" />
                     </div>
                   </div>
 
@@ -118,7 +118,7 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Email
                     </label>
-                    <Input type="email" placeholder="john.doe@example.com" />
+                    <Input type="email" placeholder="sakshmm347@example.com" />
                   </div>
 
                   <div>

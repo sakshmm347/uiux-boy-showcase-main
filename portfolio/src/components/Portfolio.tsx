@@ -37,7 +37,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-secondary/50">
+    <section id="portfolio" className="py-20 bg-secondary/50 md:h-screen">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}

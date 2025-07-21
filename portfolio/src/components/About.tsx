@@ -11,8 +11,8 @@ const About = () => {
     { image: clientsImage},
     { image: teamImage}, ]
   return (
-    <section id="about" className="py-20 bg-secondary/50 bg-black md:h-screen">
-      <div className="container mx-auto px-6 relative top-10">
+    <section id="about" className="py-20 bg-black  md:h-screen">
+      <div className="container mx-auto px-6 relative top-10 ">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">

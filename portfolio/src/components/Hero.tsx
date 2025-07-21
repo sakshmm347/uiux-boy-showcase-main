@@ -6,10 +6,10 @@ import DarkVeil from './DarkVeli';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen w-full overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full overflow-hidden ">
       {/* Background Image Container */}
       <div
-        className="w-full h-screen bg-cover bg-center relative"
+        className="w-full h-screen bg-cover bg-center relative "
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         {/* Dark overlay */}
@@ -19,8 +19,8 @@ const Hero = () => {
 
         {/* Centered Content */}
         <div className="absolute inset-0 flex items-center justify-center z-10 ">
-          <div className="max-w-6xl mx-auto px-6 w-full">
-            <div className="flex flex-col md:flex-row relative items-stretch  justify-between md:gap-52">
+          <div className="max-w-8xl mx-auto px-6 ">
+            <div className="flex flex-col md:flex-row relative items-stretch  justify-between md:gap-52  ">
               {/* Image Section */}
               <div className="flex-1 animate-slide-up " style={{ animationDelay: '0.5s' }}>
                 <img
@@ -30,14 +30,15 @@ const Hero = () => {
                 />
               </div>
               {/* Text Section */}
-              <div className="text-center  flex-1 animate-fade-in ">
-                <h1 className="text-5xl md:text-8xl font-bold text-foreground mb-6">
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <div className="text-center  flex-1 animate-fade-in">
+                
+                <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent ">
                     SAKSHAM
                   </span>
                 </h1>
                 <h2
-                  className="text-2xl md:text-4xl text-white mb-6 animate-slide-up"
+                  className="text-2xl md:text-4xl text-muted-foreground mb-6 animate-slide-up"
                   style={{ animationDelay: '0.2s' }}
                 >
                   UI/UX Designer & Developer

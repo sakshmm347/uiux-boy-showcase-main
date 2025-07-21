@@ -53,7 +53,7 @@ const Skills = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              My <span className="text-primary">Skills</span>
+              My <span className="text-foreground">Skills</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Tools and technologies I use to bring ideas to life

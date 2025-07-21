@@ -18,7 +18,7 @@ const Header = () => {
       <nav className="container mx-auto  px-6 py-4  bg-background/5 md:rounded-full  backdrop-blur-md ">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-primary">
+          <div className="text-2xl font-bold text-primary ">
             Portfolio
           </div>
 
@@ -37,7 +37,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden text-primary">
             <Button
               variant="ghost"
               size="sm"
@@ -50,16 +50,17 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+          <div className="md:hidden mt-4 pb-4 animate-fade-in ">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 py-2"
+                  className="text-primary hover:text-white transition-colors duration-300 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
+                  
                 </a>
               ))}
             </div>

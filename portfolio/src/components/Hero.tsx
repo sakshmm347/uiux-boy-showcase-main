@@ -30,21 +30,20 @@ const Hero = () => {
                 />
               </div>
               {/* Text Section */}
-              <div className="text-center md:text-left flex-1 animate-fade-in ">
-                <p className="text-lg text-muted-foreground mb-4">Hello, I'm</p>
-                <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
+              <div className="text-center  flex-1 animate-fade-in ">
+                <h1 className="text-5xl md:text-8xl font-bold text-foreground mb-6">
                   <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    Saksham
+                    SAKSHAM
                   </span>
                 </h1>
                 <h2
-                  className="text-2xl md:text-4xl text-muted-foreground mb-6 animate-slide-up"
+                  className="text-2xl md:text-4xl text-white mb-6 animate-slide-up"
                   style={{ animationDelay: '0.2s' }}
                 >
                   UI/UX Designer & Developer
                 </h2>
                 <p
-                  className="text-lg text-muted-foreground mb-8 max-w-xl animate-slide-up leading-relaxed"
+                  className="text-lg text-white mb-8 max-w-xl animate-slide-up leading-relaxed"
                   style={{ animationDelay: '0.4s' }}
                 >
                   I craft meaningful digital experiences through innovative design solutions.

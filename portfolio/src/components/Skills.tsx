@@ -47,8 +47,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 ">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-20 md:h-screen">
+      <div className="container mx-auto px-6 relative top-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">

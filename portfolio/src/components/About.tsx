@@ -11,15 +11,15 @@ const About = () => {
     { image: clientsImage},
     { image: teamImage}, ]
   return (
-    <section id="about" className="py-20 bg-secondary/50 ">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-20 bg-secondary/50 bg-black md:h-screen">
+      <div className="container mx-auto px-6 relative top-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               About <span className="text-primary">Me</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white max-w-2xl mx-auto">
               Passionate designer with a focus on creating exceptional user experiences
             </p>
           </div>
@@ -27,20 +27,20 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">
+              <h3 className="text-2xl font-semibold text-primary mb-4">
                 Creating Digital Solutions That Matter
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-white leading-relaxed mb-4">
                 I'm a passionate UI/UX designer with over 5 years of experience in creating 
                 digital experiences that not only look stunning but also provide intuitive 
                 and meaningful interactions for users.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-white leading-relaxed mb-4">
                 My design philosophy centers around understanding user needs, business goals, 
                 and technical constraints to create solutions that are both beautiful and functional. 
                 I believe great design is invisible – it just works.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-white leading-relaxed">
                 When I'm not designing, you can find me exploring the latest design trends, 
                 learning new tools, or collaborating with amazing teams to bring ideas to life.
               </p>
@@ -51,14 +51,14 @@ const About = () => {
               {stats.map((stat, index) => (
                 <Card
                   key={index}
-                  className="group hover:shadow-medium transition-all duration-300 animate-slide-up border-border/50"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="group hover:shadow-medium transition-all duration-300  animate-slide-up border-border/50 "
+                  
                 >
                   <CardContent className="p-0 text-center">
                     <img
                       src={stat.image}
                      
-                      className="h-52  w-full mx-auto  object-cover  group-hover:scale-105 transition-transform duration-200"
+                      className="h-52  w-full mx-auto  object-contain grayscale group-hover:grayscale-0 group-hover:scale-105  duration-200"
                     />
                   </CardContent>
                 </Card>

@@ -37,12 +37,12 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-secondary/50 md:h-screen">
-      <div className="container mx-auto px-6">
+    <section id="portfolio" className="py-20 bg-secondary/50 md:h-screen bg-black">
+      <div className="container mx-auto px-6 relative top-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               My <span className="text-primary">Portfolio</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

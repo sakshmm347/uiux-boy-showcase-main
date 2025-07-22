@@ -4,6 +4,7 @@ import heroImage from '@/assets/hero-image.jpg';
 import profileImage from '@/assets/img-1.jpg'; // Replace with your image
 import DarkVeil from './DarkVeli';
 
+
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen w-full overflow-hidden ">
@@ -18,21 +19,22 @@ const Hero = () => {
         </div>
 
         {/* Centered Content */}
-        <div className="absolute inset-0 flex items-center justify-center z-10 ">
-          <div className="max-w-8xl mx-auto px-6 ">
-            <div className="flex flex-col md:flex-row relative items-stretch  justify-between md:gap-52  ">
-              {/* Image Section */}
-              <div className="flex-1 animate-slide-up " style={{ animationDelay: '0.5s' }}>
+        <div className="absolute inset-0 flex  items-center justify-center z-10 mt-6">
+          <div className=" mx-auto px-6 ">
+            <div className="flex flex-col relative items-stretch  justify-between gap-4   ">
+               {/* Image Section */}
+              <div className="animate-slide-up   " style={{ animationDelay: '0.5s' }}>
                 <img
                   src={profileImage}
                   alt="Profile"
-                  className="rounded-full shadow-lg w-full full h-96  max-w-sm mx-auto object-cover"
+                  className="rounded-full  shadow-lg w-48  h-48 max-w-sm mx-auto object-cover"
                 />
               </div>
+
               {/* Text Section */}
-              <div className="text-center  flex-1 animate-fade-in">
-                
-                <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
+              <div className="text-center  flex-1 animate-fade-in   ">
+                <p className='text-muted-foreground'>Hello, I'm</p>
+                <h1 className="text-5xl md:text-8xl font-bold text-foreground mb-6">
                   <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent ">
                     SAKSHAM
                   </span>
@@ -44,7 +46,7 @@ const Hero = () => {
                   UI/UX Designer & Developer
                 </h2>
                 <p
-                  className="text-lg text-white mb-8 max-w-xl animate-slide-up leading-relaxed"
+                  className="text-md text-muted-foreground mb-8 max-w-xl animate-slide-up leading-relaxed"
                   style={{ animationDelay: '0.4s' }}
                 >
                   I craft meaningful digital experiences through innovative design solutions.
@@ -54,7 +56,7 @@ const Hero = () => {
 
                 {/* CTA Buttons */}
                 <div
-                  className="animate-slide-up flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center"
+                  className="animate-slide-up flex flex-col  gap-4 justify-center md:justify-start items-center"
                   style={{ animationDelay: '0.6s' }}
                 >
                   <Button size="lg" className="px-8 py-6 text-lg group shadow-medium">
@@ -78,7 +80,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              
+             
             </div>
           </div>
         </div>

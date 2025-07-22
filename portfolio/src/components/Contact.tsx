@@ -33,13 +33,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:h-screen">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+    <section id="contact" className="py-20 md:h-screen bg-black">
+      <div className="container mx-auto px-6 relative top-10 ">
+        <div className="max-w-6xl mx-auto ">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Get In <span className="text-foreground">Touch</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              Get In <span className="text-primary">Touch</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ready to start your next project? Let's collaborate and create something amazing together.

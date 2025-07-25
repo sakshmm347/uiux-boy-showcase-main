@@ -1,9 +1,14 @@
+import React, { useEffect } from "react";
 import { ExternalLink, Github } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
 import project3 from '@/assets/project-3.jpg';
+
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 const Portfolio = () => {
   const projects = [
@@ -35,14 +40,17 @@ const Portfolio = () => {
       codeLink: '#'
     }
   ];
+  useEffect(()=>{
+       AOS.init({duration:1200})
+    })
 
   return (
-    <section id="portfolio" className="py-20 bg-black md:h-screen ">
-      <div className="container mx-auto px-6 relative top-10">
+    <section id="portfolio" className="py-20  md:h-screen " >
+      <div className="container mx-auto px-6 relative top-10" data-aos="fade-up">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               My <span className="text-primary">Portfolio</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -51,7 +59,7 @@ const Portfolio = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
             {projects.map((project, index) => (
               <Card key={project.id} className="group overflow-hidden hover:shadow-medium transition-all duration-300 animate-slide-up border-border/50" style={{ animationDelay: `${index * 0.1}s` }}>
                 {/* Project Image */}
@@ -63,14 +71,7 @@ const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex gap-3">
-                      <Button size="sm" variant="secondary" className="opacity-90">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
-                      </Button>
-                      <Button size="sm" variant="secondary" className="opacity-90">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </Button>
+                    
                     </div>
                   </div>
                 </div>

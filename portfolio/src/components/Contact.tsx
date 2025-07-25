@@ -3,6 +3,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import React, { useEffect } from "react";
+
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 const Contact = () => {
   const contactInfo = [
@@ -31,14 +36,18 @@ const Contact = () => {
     { icon: Github, label: 'GitHub', href: '#' },
     { icon: Twitter, label: 'Twitter', href: '#' },
   ];
+    useEffect(()=>{
+         AOS.init({duration:1200})
+      })
+  
 
   return (
-    <section id="contact" className="py-20 md:h-screen bg-black">
-      <div className="container mx-auto px-6 relative top-10 ">
+    <section id="contact" className="py-20 md:h-screen ">
+      <div className="container mx-auto px-6 relative top-10 " data-aos="fade-up">
         <div className="max-w-6xl mx-auto ">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Get In <span className="text-primary">Touch</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -46,7 +55,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12" data-aos="fade-up">
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="animate-fade-in">

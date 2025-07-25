@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   DraggableCardBody,
   DraggableCardContainer,
 } from "./draggable-card";
-import { Card, CardContent } from '@/components/ui/card';
 import experienceImage from '@/assets/img1.jpg';
 import projectsImage from '@/assets/img2.jpg';
 import clientsImage from '@/assets/img3.jpg';
@@ -11,9 +10,14 @@ import teamImage from '@/assets/img4.jpg';
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css"
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
 
 
 const About = () => {
@@ -64,23 +68,26 @@ const About = () => {
       className: "absolute top-8 left-[30%] rotate-[4deg]",
     },
   ];
+  useEffect(()=>{
+   AOS.init({duration:1200})
+})
   return (
     <section id="about" className="py-20 bg-black  md:h-screen">
       <div className="container mx-auto px-6 relative top-10 ">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+          <div className="text-center mb-16 " data-aos="fade-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-muted-foreground mb-6">
               About <span className="text-primary">Me</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto" >
               Passionate designer with a focus on creating exceptional user experiences
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center" data-aos="fade-up">
             {/* Content */}
-            <div className="space-y-6 relative md:bottom-40">
+            <div className="space-y-6 relative md:bottom-40" >
               <h3 className="text-2xl font-semibold text-primary mb-4">
                 Creating Digital Solutions That Matter
               </h3>
@@ -100,8 +107,8 @@ const About = () => {
               </p>
             </div>
 
-              <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
-      <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800 ">
+              <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip" >
+      <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800 " >
         Happy Memories
       </p>
       {items.map((item) => (
